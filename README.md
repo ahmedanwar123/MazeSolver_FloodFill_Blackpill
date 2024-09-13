@@ -8,7 +8,7 @@ The project is built using the Arduino IDE and runs on an STM32F4-based Blackpil
 - **Ultrasonic Sensors**: Three ultrasonic sensors detect walls in front and on the sides of the robot.
 - **Encoders**: Dual motor encoders track the robot's movement and update its odometry.
 - **Flood Fill Algorithm**: The robot navigates through a maze using the flood fill algorithm to find the optimal path.
-- **Interrupt-Driven Encoders**: Encoders use interrupt service routines (ISRs) to accurately count wheel rotations.
+- **Encoders**: Encoders use interrupt service routines (ISRs) to accurately count wheel rotations.
 - **Modular Codebase**: The project is split into multiple modules for sensors, odometry, motor control, and maze-solving logic.
 
 ## Project Structure
