@@ -47,7 +47,7 @@ The project is built using the Arduino IDE and runs on an STM32F4-based Blackpil
 ### Installation
 1. Clone the repository:
    ```bash
-   git cloneNhttps://github.com/ahmedanwar123/Nezumi2.1-blackpill_f401cc.git
+   git clone https://github.com/ahmedanwar123/Nezumi2.1-blackpill_f401cc.git
    ```
 2. Open `main.ino` in the Arduino IDE.
 3. Connect your STM32F401 Blackpill to your computer via USB.
