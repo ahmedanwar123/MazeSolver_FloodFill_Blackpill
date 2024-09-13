@@ -19,7 +19,7 @@ The project is built using the Arduino IDE and runs on an STM32F4-based Blackpil
 - `maze.h`: Implements the flood fill algorithm for maze navigation.
 
 ## Hardware Setup
-- **Microcontroller**: STM32F401 Blackpill (Using the Arduino IDE).
+- **Microcontroller**: STM32F401CCU6 Blackpill (Using the Arduino IDE).
 - **Motors**: Two DC motors with encoders for tracking wheel rotations.
 - **Ultrasonic Sensors**: Three sensors (front, left, right) for detecting walls.
 - **Motor Driver**: A dual-channel motor driver to control motor speed and direction.
