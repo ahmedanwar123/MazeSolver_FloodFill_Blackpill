@@ -4,23 +4,32 @@
 #include <Wire.h>
 
 // Constants for robot geometry and encoders
-#define WHEEL_DIAMETER 0.05
+#define WHEEL_DIAMETER 0.06
 #define WHEEL_CIRCUMFERENCE (WHEEL_DIAMETER * 3.14159)
 #define TICKS_PER_REVOLUTION 360
 #define WHEELBASE 0.15
 #define GRID_SIZE 16
 #define MPU_ADDR 0x68
-#define ULTRASONIC_FRONT_PIN 8
-#define ULTRASONIC_LEFT_PIN 9
-#define ULTRASONIC_RIGHT_PIN 10
-#define LEFT_ENCODER_PIN 2
-#define RIGHT_ENCODER_PIN 3
+#define CELL_SIZE 1
+// Ultrasonic pins
+#define ULTRASONIC_LEFT_TRIG 2
+#define ULTRASONIC_LEFT_ECHO 3
+#define ULTRASONIC_FRONT_TRIG 4
+#define ULTRASONIC_FRONT_ECHO 5
+#define ULTRASONIC_RIGHT_TRIG 6
+#define ULTRASONIC_RIGHT_ECHO 7
+
+// Encoder pins (A and B for each encoder)
+#define LEFT_ENCODER_PIN_A 8
+#define LEFT_ENCODER_PIN_B 9
+#define RIGHT_ENCODER_PIN_A 10
+#define RIGHT_ENCODER_PIN_B 11
 
 // Motor pins
-#define LEFT_MOTOR_PIN1 4
-#define LEFT_MOTOR_PIN2 5
-#define RIGHT_MOTOR_PIN1 6
-#define RIGHT_MOTOR_PIN2 7
+#define LEFT_MOTOR_PIN1 12
+#define LEFT_MOTOR_PIN2 13
+#define RIGHT_MOTOR_PIN1 14
+#define RIGHT_MOTOR_PIN2 15
 
 // Global variables
 volatile int left_ticks = 0;

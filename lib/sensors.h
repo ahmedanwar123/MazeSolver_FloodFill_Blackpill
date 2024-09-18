@@ -17,17 +17,30 @@ void readMPU6050(int16_t &ax, int16_t &ay, int16_t &az, int16_t &gx, int16_t &gy
   gz = Wire.read() << 8 | Wire.read();
 }
 
-float readUltrasonicDistance(int pin) {
+float readUltrasonicDistance(int trigPin, int echoPin) {
   long duration;
-  pinMode(pin, OUTPUT);
-  digitalWrite(pin, LOW);
+  
+  // Set the trigger pin as OUTPUT and the echo pin as INPUT
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  
+  // Ensure the trigger pin is LOW
+  digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
-  digitalWrite(pin, HIGH);
+  
+  // Send a 10 microsecond pulse to trigger the sensor
+  digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
-  digitalWrite(pin, LOW);
-  pinMode(pin, INPUT);
-  duration = pulseIn(pin, HIGH);
-  return duration * 0.0344 / 2;
+  digitalWrite(trigPin, LOW);
+  
+  // Read the echo pin
+  duration = pulseIn(echoPin, HIGH);
+  
+  // Calculate the distance in centimeters
+  float distance = duration * 0.0344 / 2;
+  
+  return distance;
 }
+
 
 #endif
